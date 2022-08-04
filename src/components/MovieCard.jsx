@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import image from '../assets/images/image.png'
 
@@ -21,8 +22,10 @@ const MovieImage = styled.img`
 export const MovieCard = () => {
     return (
         <Movie>
-            <MovieImage src={ image } alt="" />
-            {/* <MovieTile> Movie Title</MovieTile> */}
+            <Link to={'/movies'}>
+                <MovieImage src={ image } alt="" />
+                {/* <MovieTile> Movie Title</MovieTile> */}
+            </Link>
         </Movie>
     )
 }

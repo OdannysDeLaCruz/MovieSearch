@@ -17,6 +17,11 @@ const MovieCarouselWapper = styled.div`
     
 const MovieSlider = styled.div`
     display: flex;
+    padding-left: 16px;
+
+    @media (min-width: 430px) {
+        padding-left: 60px;
+    }
 
     > div {
         margin-right: 10px;
@@ -28,12 +33,17 @@ const MovieCarouselTitle = styled.h1`
     font-size: 20px;
     color: white;
     margin-bottom: 16px;
+    padding-left: 16px;
+
+    @media (min-width: 430px) {
+        padding-left: 60px;
+    }
 `
 
-export function MovieCarousel() {
+export function MovieCarousel({ title }) {
     return (
         <MovieCarouselMain>
-            <MovieCarouselTitle>Recomendadas para tí </MovieCarouselTitle>
+            <MovieCarouselTitle> { title } </MovieCarouselTitle>
             <MovieCarouselWapper>
                 <MovieSlider>
                     <MovieCard className="movie__slider-item" />
