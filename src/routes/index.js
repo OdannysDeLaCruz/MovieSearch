@@ -10,8 +10,7 @@ import { NotFoundPage } from "../pages/NotFoundPage";
         // <Router>
             <Routes>
                 <Route path="/" element={ <HomePage />}></Route>
-                <Route path="/movies" element={ <h1>Moviews</h1>}></Route>
-                <Route path="/details" element={ <h1>Details</h1>}></Route>
+                <Route path="/movies/:movieId" element={ <h1>Moviews</h1>}></Route>
                 <Route path="*" element={ <NotFoundPage /> }></Route>
             </Routes>
         // </Router>

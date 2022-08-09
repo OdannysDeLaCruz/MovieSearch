@@ -13,18 +13,12 @@ const MovieImage = styled.img`
     width: 100%;
     border-radius: 4px;
 `
-// const MovieTile = styled.span`
-//     font-size: 15px;
-//     color: white;
-//     text-align: center;
-//     margin-top: 16px;
-// `
-export const MovieCard = () => {
+
+export const MovieCard = ({ movie }) => {
     return (
         <Movie>
-            <Link to={'/movies'}>
+            <Link to={`/movies/${movie.id}`}>
                 <MovieImage src={ image } alt="" />
-                {/* <MovieTile> Movie Title</MovieTile> */}
             </Link>
         </Movie>
     )

@@ -46,14 +46,14 @@ export function MovieCarousel({ title }) {
             <MovieCarouselTitle> { title } </MovieCarouselTitle>
             <MovieCarouselWapper>
                 <MovieSlider>
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
-                    <MovieCard className="movie__slider-item" />
+                    <MovieCard movie={{id: 1, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 2, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 3, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 4, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 5, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 6, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 7, image: '' }} className="movie__slider-item" />
+                    <MovieCard movie={{id: 8, image: '' }} className="movie__slider-item" />
                 </MovieSlider>
             </MovieCarouselWapper>
         </MovieCarouselMain>
