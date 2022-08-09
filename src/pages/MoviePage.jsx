@@ -4,7 +4,6 @@ export function MoviePage () {
     return (
         <LayoutContainer>
             <div>Detalle</div>
-
         </LayoutContainer>
     )
 }
