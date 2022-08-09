@@ -49,7 +49,11 @@ export function MovieCarousel({ title, movies }) {
                     {
                         movies.map(movie => {
                             return (
-                                <MovieCard movie={ movie } className="movie__slider-item" />
+                                <MovieCard 
+                                    key={movie.id}
+                                    className="movie__slider-item" 
+                                    movie={ movie } 
+                                />
                             )
                         })
                     }

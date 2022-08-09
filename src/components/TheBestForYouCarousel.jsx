@@ -6,10 +6,14 @@ export function TheBestForYouCarousel() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
+  
         getMovies()
-        .then(res => {
-            setMovies(res.results)
+        .then(response => response.json())
+        .then(data => {
+            setMovies(data.results)
+            // console.log(movies) 
         })
+
     }, [])
 
     return (
