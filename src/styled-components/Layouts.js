@@ -2,7 +2,12 @@ import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
     padding: 0;
-    // max-width: 1400px;
+    max-width: 1400px;
+    margin: 30px auto;
+`
+
+export const LayoutContainerFluid = styled.div`
+    padding: 0;
     margin: 30px auto;
 `
 

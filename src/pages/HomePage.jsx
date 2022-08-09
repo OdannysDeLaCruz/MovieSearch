@@ -1,9 +1,9 @@
-import { LayoutContainer } from "../styled-components/Layouts"
+import { LayoutContainerFluid } from "../styled-components/Layouts"
 import { MovieCarousel } from "../components/MovieCarousel";
 
 export function HomePage() {
     return (
-        <LayoutContainer>
+        <LayoutContainerFluid>
             <MovieCarousel title="Lo mejor para tí" />
             <MovieCarousel title="Lo mejor para tí" />
             <MovieCarousel title="Lo mejor para tí" />
@@ -12,6 +12,6 @@ export function HomePage() {
             <MovieCarousel title="Lo mejor para tí" />
             <MovieCarousel title="Lo mejor para tí" />
             <MovieCarousel title="Lo mejor para tí" />
-        </LayoutContainer>
+        </LayoutContainerFluid>
     )
 }

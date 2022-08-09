@@ -1,5 +1,10 @@
+import { LayoutContainer } from "../styled-components/Layouts"
+
 export function MoviePage () {
     return (
-        <div>Detalle</div>
+        <LayoutContainer>
+            <div>Detalle</div>
+
+        </LayoutContainer>
     )
 }
