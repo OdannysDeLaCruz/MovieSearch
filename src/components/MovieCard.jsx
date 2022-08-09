@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import image from '../assets/images/image.png'
 
 const Movie = styled.div`
-    width: 240px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +14,11 @@ const MovieImage = styled.img`
 `
 
 export const MovieCard = ({ movie }) => {
+    const poster = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
     return (
         <Movie>
             <Link to={`/movies/${movie.id}`}>
-                <MovieImage src={ image } alt="" />
+                <MovieImage src={ poster} alt={ movie.title } />
             </Link>
         </Movie>
     )

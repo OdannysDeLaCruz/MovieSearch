@@ -40,20 +40,19 @@ const MovieCarouselTitle = styled.h1`
     }
 `
 
-export function MovieCarousel({ title }) {
+export function MovieCarousel({ title, movies }) {
     return (
         <MovieCarouselMain>
             <MovieCarouselTitle> { title } </MovieCarouselTitle>
             <MovieCarouselWapper>
                 <MovieSlider>
-                    <MovieCard movie={{id: 1, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 2, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 3, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 4, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 5, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 6, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 7, image: '' }} className="movie__slider-item" />
-                    <MovieCard movie={{id: 8, image: '' }} className="movie__slider-item" />
+                    {
+                        movies.map(movie => {
+                            return (
+                                <MovieCard movie={ movie } className="movie__slider-item" />
+                            )
+                        })
+                    }
                 </MovieSlider>
             </MovieCarouselWapper>
         </MovieCarouselMain>
