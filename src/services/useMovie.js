@@ -15,6 +15,15 @@ export const getMovie = async ( movieId ) => {
     return fetch(`${HOST}/movie/${movieId}`, OPTIONS)
 }
 
+export const searchMovie = async (keyword) => {
+    return fetch(`${HOST}/search/movie?query=${keyword}`, OPTIONS)
+    .then((response) => response.json())
+}
+
+export const getVideosMovie = async (movieId) => {
+    return fetch(`${HOST}/movie/${movieId}/videos`, OPTIONS)
+}
+
 export const getGenres = async () => {
     return fetch(`${HOST}/genre/movie/list`, OPTIONS)
     .then((response) => response.json())

@@ -16,7 +16,7 @@ import {
     MovieOverviewTitle,
     MovieOverviewText 
 } from "../styled-components/Movie"
-import { getMovie } from "../services/useMovie"
+import { getMovie, getVideosMovie } from "../services/useMovie"
 
 export function MovieDetailPage () {
     const { movieId } = useParams()
@@ -26,6 +26,11 @@ export function MovieDetailPage () {
         getMovie(movieId)
         .then( response => response.json() )
         .then( data => setMovie(data))
+    }, [movieId])
+    
+    useEffect(() => {
+        getVideosMovie(movieId)
+        .then( data => console.log(data))
     }, [movieId])
 
     return (
@@ -42,7 +47,9 @@ export function MovieDetailPage () {
                             <MoviePosterImage src={ `https://image.tmdb.org/t/p/w500/${movie.poster_path}` } alt={ movie.title } />
                         </MoviePoster>
                         <MovieSummary>
+
                             <MovieDetailTitle> { movie.title } </MovieDetailTitle>
+
                             <MovieGenres>
                                 { 
                                     movie.genres.map((genre) => {
@@ -56,16 +63,8 @@ export function MovieDetailPage () {
                                 <MovieOverviewText>{ movie.overview }</MovieOverviewText>
                             </MovieOverview>
 
-                            <div>
-                                <div>2h 43m</div>
-                            </div>
                             <ButtonPrincipal>Play Trailer</ButtonPrincipal>
-                            <div>
-                                <button>Fiction</button>
-                                <button>Fiction</button>
-                                <button>Fiction</button>
-                            </div>
-                            
+
                         </MovieSummary>
                     </MovieSumamryWrapper>
                 </LayoutContainer>
