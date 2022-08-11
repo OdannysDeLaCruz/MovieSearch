@@ -11,6 +11,10 @@ export const getMovies = async () => {
     return fetch(`${HOST}/discover/movie`, OPTIONS)
 }
 
+export const getMovie = async ( movieId ) => {
+    return fetch(`${HOST}/movie/${movieId}`, OPTIONS)
+}
+
 export const getGenres = async () => {
     return fetch(`${HOST}/genre/movie/list`, OPTIONS)
     .then((response) => response.json())

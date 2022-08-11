@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
     outline: 1px solid pink;
-    
 `
     
 export const NavList = styled.nav`
@@ -22,5 +21,12 @@ export const NavListItem = styled.nav`
     > a {
         color: #ffffff;
     }
+`
+
+export const NavigationBar = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
 `
 

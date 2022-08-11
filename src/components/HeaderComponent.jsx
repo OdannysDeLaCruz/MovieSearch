@@ -21,6 +21,7 @@ export function HeaderComponent() {
                 <Logotype>MovieFlix</Logotype>
                 <NavList>
                     <NavListItem><Link to="/">Home</Link></NavListItem>
+                    <NavListItem><Link to="/">Home</Link></NavListItem>
                     <NavListItem><Link to="/movies">Movies</Link></NavListItem>
                     <NavListItem><Link to="/details">Movies</Link></NavListItem>
                 </NavList>

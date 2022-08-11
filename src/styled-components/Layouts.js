@@ -20,6 +20,7 @@ export const Header = styled.header`
     align-items: center;
     width: 100%;
     background: #0E0E0E;
+    z-index: 9;
 `
 
 export const HeaderWrapper = styled.div`
