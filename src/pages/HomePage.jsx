@@ -5,6 +5,8 @@ export function HomePage() {
     return (
         <LayoutContainerFluid>
             <TheBestForYouCarousel />
+            <TheBestForYouCarousel />
+            <TheBestForYouCarousel />
         </LayoutContainerFluid>
     )
 }
