@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Header, HeaderWrapper } from "../styled-components/Layouts"
 import { NavList, NavListItem } from "../styled-components/Nav"
+import { MovieSearch } from "./MovieSearch";
 
 const Logotype = styled.h1`
     color: #ffffff;
@@ -20,7 +21,7 @@ export function HeaderComponent() {
             <HeaderWrapper>
                 <Logotype>MovieFlix</Logotype>
                 <NavList>
-                    <NavListItem><Link to="/">Home</Link></NavListItem>
+                    <NavListItem><Link to="/"><MovieSearch/></Link></NavListItem>
                     <NavListItem><Link to="/">Home</Link></NavListItem>
                     <NavListItem><Link to="/movies">Movies</Link></NavListItem>
                     <NavListItem><Link to="/details">Movies</Link></NavListItem>
